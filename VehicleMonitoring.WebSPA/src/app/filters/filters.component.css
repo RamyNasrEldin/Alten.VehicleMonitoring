@@ -1,0 +1,21 @@
+.dropdown-menu li a:hover, .dropdown-menu li a:focus, .dropdown-menu li a:active {
+  background-color: gray !important;
+  color: #FFFFFF;
+}
+
+.card-header-custom {
+  padding: 6px;
+}
+
+.div-inline {
+  display: flex;
+}
+
+.material-icom-margin {
+  margin-right: 5px
+}
+
+.span-custom {
+  margin-top: 18px;
+  margin-right: 10px;
+}

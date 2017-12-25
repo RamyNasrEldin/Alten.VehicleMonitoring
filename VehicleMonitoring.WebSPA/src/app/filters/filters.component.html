@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-header card-header-custom" data-background-color="blue">
+    <div class="div-inline">
+      <i class="material-icons material-icom-margin">filter_list</i>
+      <h4 class="title">Filters</h4>
+    </div>
+  </div>
+  <div class="card-content card-content-custom">
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <div class="div-inline">
+          <span class="span-custom">
+            Customer:
+          </span>
+          <div class="dropdown">
+            <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+              {{selectedCustomerName}}
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li (click)="addCustomerFilter(null)"><a>All</a></li>
+              <li *ngFor="let customer of customers" (click)="addCustomerFilter(customer)"><a>{{customer.name}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="div-inline">
+          <span class="span-custom">
+            Status:
+          </span>
+          <div class="dropdown">
+            <a href="#" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+              {{selectedStatusName}}
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li (click)="addStatusFilter(null, 'All')"><a>All</a></li>
+              <li (click)="addStatusFilter(true, 'Connected')"><a>Connected</a></li>
+              <li (click)="addStatusFilter(false, 'Disconnected')"><a>Disconnected</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

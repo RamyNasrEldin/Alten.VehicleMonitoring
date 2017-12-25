@@ -1,0 +1,15 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <app-filter [customers]="customers" (onFilterApplied)="applyFilter($event)"></app-filter>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6" *ngFor="let customer of filteredCustomerVehicleList">
+        <app-customerVehicles [customer]="customer"></app-customerVehicles>
+      </div>
+      <div *ngIf=" filteredCustomerVehicleList !== null && filteredCustomerVehicleList.length == 0" class="noDataText">
+        <span>No Data To Display</span>
+      </div>
+    </div>
+  </div>
+</div>

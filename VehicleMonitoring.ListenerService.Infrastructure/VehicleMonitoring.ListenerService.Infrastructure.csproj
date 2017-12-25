@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MessagingConfiguration.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleMonitoring.Core\VehicleMonitoring.Core.csproj" />
+    <ProjectReference Include="..\VehicleMonitoring.EventBusRabbitMQ\VehicleMonitoring.EventBusRabbitMQ.csproj" />
+    <ProjectReference Include="..\VehicleMonitoring.EventBus\VehicleMonitoring.EventBus.csproj" />
+    <ProjectReference Include="..\VehicleMonitoring.Messaging\VehicleMonitoring.Messaging.csproj" />
+    <ProjectReference Include="..\VehicleMonitoring.SignalR\VehicleMonitoring.SignalR.csproj" />
+  </ItemGroup>
+
+</Project>

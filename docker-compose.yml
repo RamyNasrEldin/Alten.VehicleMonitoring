@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  vehiclemonitoring.vehicleservice.api:
+    image: vehiclemonitoring.vehicleservice.api
+    build:
+      context: .
+      dockerfile: VehicleMonitoring.VehicleService.API\Dockerfile
+
+  vehiclemonitoring.listenerservice.api:
+    image: vehiclemonitoring.listenerservice.api
+    build:
+      context: .
+      dockerfile: VehicleMonitoring.ListenerService.API\Dockerfile
+
+  vehiclemonitoring.activityservice.api:
+    image: vehiclemonitoring.activityservice.api
+    build:
+      context: .
+      dockerfile: VehicleMonitoring.ActivityService.API\Dockerfile
+
+
+  vehiclemonitoring.webspa:
+    image: vehiclemonitoring.webspa
+    build:
+      context: .
+      dockerfile: VehicleMonitoring.WebSPA\Dockerfile
+

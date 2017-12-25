@@ -1,0 +1,26 @@
+  <div class="card">
+    <div class="card-header" data-background-color="blue">
+      <div style="display: flex">
+        <i class="material-icons icon-user-custom">perm_identity</i>
+        <h4 class="title">{{customer.name}}</h4>
+      </div>
+      <div style="display: flex">
+        <i class="material-icons icon-vehicle-custom">location_on</i>
+        <p class="category">{{customer.address}}</p>
+      </div>
+      </div>
+      <div class="card-content">
+        <table class="table">
+          <tbody>
+            <tr *ngFor="let vehicle of customer.vehicles">
+              <td><i class="material-icons">directions_car</i></td>
+              <td>{{vehicle.regNo}} - {{vehicle.id}}</td>
+              <td class="td-actions text-right">
+                <i class="material-icons" *ngIf="vehicle.currentStatus" style="color:forestgreen">sentiment_very_satisfied</i>
+                <i class="material-icons" *ngIf="!vehicle.currentStatus" style="color:red">sentiment_very_dissatisfied</i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

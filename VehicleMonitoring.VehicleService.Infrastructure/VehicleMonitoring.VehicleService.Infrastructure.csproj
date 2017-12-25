@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleMonitoring.Core\VehicleMonitoring.Core.csproj" />
+    <ProjectReference Include="..\VehicleMonitoring.Messaging\VehicleMonitoring.Messaging.csproj" />
+    <ProjectReference Include="..\VehicleMonitoring.Repository\VehicleMonitoring.Repository.csproj" />
+    <ProjectReference Include="..\VehicleMonitoring.VehicleService.Data\VehicleMonitoring.VehicleService.Data.csproj" />
+    <ProjectReference Include="..\VehicleMonitoring.VehicleService.DomainModels\VehicleMonitoring.VehicleService.DomainModels.csproj" />
+    <ProjectReference Include="..\VehicleMonitoring.VehicleService.DTO\VehicleMonitoring.VehicleService.DTO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>
