@@ -5,22 +5,22 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "27819:80"
   vehiclemonitoring.listenerservice.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "5688:80"
   vehiclemonitoring.activityservice.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "59899:80"
   vehiclemonitoring.webspa:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
+      - "4200:80"
 networks:
   default:
     external:
