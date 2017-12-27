@@ -61,7 +61,7 @@ export class MonitoringBoard implements OnInit{
       this.selectedStatus = data.status;
 
       if (data.customerId != null) {
-        that.filteredCustomerVehicleList = that.filteredCustomerVehicleList.filter(customer => customer.id == data.customerId);
+        that.filteredCustomerVehicleList = that.filteredCustomerVehicleList.filter(customer => customer.customerId == data.customerId);
       }
 
       if (data.status != null) {
