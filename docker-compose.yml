@@ -1,28 +1,74 @@
 version: '3'
 
 services:
-  vehiclemonitoring.vehicleservice.api:
-    image: vehiclemonitoring.vehicleservice.api
-    build:
-      context: .
-      dockerfile: VehicleMonitoring.VehicleService.API\Dockerfile
-
-  vehiclemonitoring.listenerservice.api:
-    image: vehiclemonitoring.listenerservice.api
-    build:
-      context: .
-      dockerfile: VehicleMonitoring.ListenerService.API\Dockerfile
-
   vehiclemonitoring.activityservice.api:
     image: vehiclemonitoring.activityservice.api
+    container_name: activityserviceapi
+    hostname: activityserviceapi
+    environment:
+      - ALTEN_MQ_USERNAME=alten
+      - ALTEN_MQ_PASSWORD=ramy
+      - ALTEN_MQ_SERVER=altenmq
+    ports:
+          - 3000:80
     build:
       context: .
-      dockerfile: VehicleMonitoring.ActivityService.API\Dockerfile
-
-
-  vehiclemonitoring.webspa:
-    image: vehiclemonitoring.webspa
+      dockerfile: VehicleMonitoring.ActivityService.API/Dockerfile
+    depends_on:
+      - rabbitmq
+  vehiclemonitoring.listenerservice.api:
+    image: vehiclemonitoring.listenerservice.api
+    container_name: listenerserviceapi
+    hostname: listenerserviceapi
+    environment:
+      - ALTEN_MQ_USERNAME=alten
+      - ALTEN_MQ_PASSWORD=ramy
+      - ALTEN_MQ_SERVER=altenmq
+    ports:
+          - 4000:80
     build:
       context: .
-      dockerfile: VehicleMonitoring.WebSPA\Dockerfile
-
+      dockerfile: VehicleMonitoring.ListenerService.API/Dockerfile
+    depends_on:
+      - rabbitmq
+  vehiclemonitoring.vehicleservice.api:
+    image: vehiclemonitoring.vehicleservice.api
+    container_name: vehicleserviceapi
+    hostname: vehicleserviceapi
+    environment:
+      - ALTEN_MQ_USERNAME=alten
+      - ALTEN_MQ_PASSWORD=ramy
+      - ALTEN_MQ_SERVER=altenmq
+    ports:
+          - 5000:80
+    build:
+      context: .
+      dockerfile: VehicleMonitoring.VehicleService.API/Dockerfile
+    depends_on:
+      - rabbitmq
+  vehiclemonitoring.vehicleavatarservice.simulator:
+    image: vehiclemonitoring.vehicleavatarservice.simulator
+    container_name: vehicleavatarsimulator
+    hostname: vehicleavatarsimulator
+    environment:
+      - ALTEN_MQ_USERNAME=alten
+      - ALTEN_MQ_PASSWORD=ramy
+      - ALTEN_MQ_SERVER=altenmq
+    build:
+      context: .
+      dockerfile: VehicleMonitoring.VehicleAvatarService.Simulator/Dockerfile
+    depends_on:
+      - rabbitmq
+  rabbitmq:
+     image: rabbitmq:3-management-alpine
+     container_name: altenmq
+     hostname: altenmq
+     ports:
+         - 15672:15672
+         - 5671:5671
+         - 5672:5672
+     volumes:
+         - ~/rabbitmq:/var/lib/rabbitmq 
+     environment:
+         - RABBITMQ_DEFAULT_USER=alten
+         - RABBITMQ_DEFAULT_PASS=ramy

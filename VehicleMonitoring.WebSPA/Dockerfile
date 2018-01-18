@@ -1,8 +1,13 @@
-FROM microsoft/aspnetcore:2.0-nanoserver-sac2016 AS base
+FROM microsoft/aspnetcore:2.0 AS base
+RUN apt-get update && \
+    apt-get install -y wget && \
+    apt-get install -y gnupg2 && \
+    wget -qO- https://deb.nodesource.com/setup_6.x | bash - && \
+    apt-get install -y build-essential nodejs
 WORKDIR /app
 EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.0-nanoserver-sac2016 AS build
+FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
 COPY *.sln ./
 COPY VehicleMonitoring.WebSPA/VehicleMonitoring.WebSPA.csproj VehicleMonitoring.WebSPA/

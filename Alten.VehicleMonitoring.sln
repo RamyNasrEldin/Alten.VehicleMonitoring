@@ -23,8 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleMonitoring.VehicleSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleMonitoring.VehicleService.API", "VehicleMonitoring.VehicleService.API\VehicleMonitoring.VehicleService.API.csproj", "{C09C004E-F534-4089-B1E0-89051DEB33EC}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A8CEC0F6-35C4-4835-B341-BE115AF40A33}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleMonitoring.SignalR", "VehicleMonitoring.SignalR\VehicleMonitoring.SignalR.csproj", "{50CB5379-550A-43AE-8187-0A954AE1DFD8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleMonitoring.EventBus", "VehicleMonitoring.EventBus\VehicleMonitoring.EventBus.csproj", "{4B0E7F21-1CFF-46AC-8D8B-FA61155B176B}"
@@ -71,6 +69,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleMonitoring.VehicleSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleMonitoring.ActivityService.Infrastructure.Tests", "VehicleMonitoring.ActivityService.Infrastructure.Tests\VehicleMonitoring.ActivityService.Infrastructure.Tests.csproj", "{7B07632B-487D-41F3-9961-54B6DA3B343B}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8BFB97FF-235B-4FA3-A4A5-1614EE14E83B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,10 +93,6 @@ Global
 		{C09C004E-F534-4089-B1E0-89051DEB33EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C09C004E-F534-4089-B1E0-89051DEB33EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C09C004E-F534-4089-B1E0-89051DEB33EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A8CEC0F6-35C4-4835-B341-BE115AF40A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8CEC0F6-35C4-4835-B341-BE115AF40A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8CEC0F6-35C4-4835-B341-BE115AF40A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8CEC0F6-35C4-4835-B341-BE115AF40A33}.Release|Any CPU.Build.0 = Release|Any CPU
 		{50CB5379-550A-43AE-8187-0A954AE1DFD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{50CB5379-550A-43AE-8187-0A954AE1DFD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50CB5379-550A-43AE-8187-0A954AE1DFD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -177,6 +173,10 @@ Global
 		{7B07632B-487D-41F3-9961-54B6DA3B343B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B07632B-487D-41F3-9961-54B6DA3B343B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B07632B-487D-41F3-9961-54B6DA3B343B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BFB97FF-235B-4FA3-A4A5-1614EE14E83B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BFB97FF-235B-4FA3-A4A5-1614EE14E83B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BFB97FF-235B-4FA3-A4A5-1614EE14E83B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BFB97FF-235B-4FA3-A4A5-1614EE14E83B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

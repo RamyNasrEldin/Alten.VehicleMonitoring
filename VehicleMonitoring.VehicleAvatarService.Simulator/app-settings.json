@@ -1,10 +1,9 @@
 ﻿{
 
   "EventBusConfiguration": {
-    "ConnectionString": "amqp://guest:guest@localhost:15672",
-    "EventBusConnection": "localhost",
-    "EventBusUserName": "guest",
-    "EventBusPassword": "guest",
+    "EventBusConnection": "172.17.0.1",
+    "EventBusUserName": "alten",
+    "EventBusPassword": "ramy",
     "EventBusRetryCount": "5"
   },
   "GeneralConfiguration": {
