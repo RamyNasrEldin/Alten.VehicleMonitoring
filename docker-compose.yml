@@ -66,9 +66,7 @@ services:
      ports:
          - 15672:15672
          - 5671:5671
-         - 5672:5672
-     volumes:
-         - ~/rabbitmq:/var/lib/rabbitmq 
+         - 5672:5672 
      environment:
          - RABBITMQ_DEFAULT_USER=alten
          - RABBITMQ_DEFAULT_PASS=ramy
